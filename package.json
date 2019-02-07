@@ -3,10 +3,27 @@
   "version": "1.0.0",
   "description": "Paypal Checkout for Client Integration",
   "main": "index.js",
+  "directories": {
+    "src": "src"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "npm install",
+    "install": "bower install",
+    "demo": "node index.js"
   },
   "keywords": [],
   "author": "Jason <jmpanugaling@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.7.7",
+    "bower": "^1.8.8",
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-ng-annotate": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "jquery": "^3.3.1",
+    "pump": "^3.0.0",
+    "serve": "^10.1.2"
+  }
 }
