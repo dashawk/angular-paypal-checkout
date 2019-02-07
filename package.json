@@ -1,0 +1,12 @@
+{
+  "name": "angular-paypal-checkout",
+  "version": "1.0.0",
+  "description": "Paypal Checkout for Client Integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jason <jmpanugaling@gmail.com>",
+  "license": "MIT"
+}

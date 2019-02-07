@@ -1,0 +1,25 @@
+{
+  "name": "angular-paypal-checkout",
+  "description": "Paypal Checkout for Client Integration",
+  "main": "index.js",
+  "authors": [
+    "Jason <jmpanugaling@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "paypal",
+    "paypal client",
+    "checkout",
+    "angularjs",
+    "directive"
+  ],
+  "homepage": "http://hobbyhat.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
