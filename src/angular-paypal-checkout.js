@@ -75,7 +75,7 @@
             if (config) {
                 scope.$evalAsync(function() {
                     if (!attrs.id) {
-                        scope.id = 'paypal-checkout-button';
+                        scope.id = 'default';
                     } else { 
                         scope.id = attrs.id;
                     }
@@ -109,7 +109,7 @@
     angular.module('jmp/templates/button.html', []).run(['$templateCache', function PaypalDefaultTemplate($templateCache) {
         $templateCache.put("jmp/templates/button.html",
             "<div class=\"jmp-directive paypal-checkout-button\">\n" +
-                "<div id=\"{{ id }}\"></div>\n" +
+                "<div id=\"paypal-button-{{ id }}\"></div>\n" +
             "</div>"
         );
     }]);
