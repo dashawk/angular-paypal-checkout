@@ -19,6 +19,7 @@
     "node_modules",
     "vendor",
     "bower_components",
+    "example",
     "dist",
     "test",
     "tests",
