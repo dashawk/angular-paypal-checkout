@@ -37,21 +37,22 @@ In your controller, create the configuration variables. You can use the options 
                 sandboxClientID: '',
                 productionClientID: '',
 
+                checkoutFlow: true,     // Optional. Enable Pay Now Checkout Flow
                 useConfirmation: false, // Not yet implemented
 
                 locale: 'en_GB',        // Optional
                 style: {
                     size: 'medium',     // small | medium | large | responsive
-                    label: 'Checkout',
                     shape: 'pill',      // pill | rect
                     color: 'gold'       // gold | blue | silver | black
+                    tagline: 'false'
                 },
                 payments: {
                     currency: 'USD',
-                    shippingFee: 0,     // Optional
-                    tax: 0,             // Optional
-                    referenceID: '',    // Optional
-                    totalAmount: 100,   // total amount to be paid
+                    shippingFee: 0,             // Optional
+                    tax: 0,                     // Optional
+                    referenceID: 'REF001-TEST', // Optional
+                    totalAmount: 100,           // total amount to be paid
 
                     /**
                      * Optional. If ever you want to fill this in,
@@ -60,8 +61,8 @@ In your controller, create the configuration variables. You can use the options 
                      * */
                     items: [
                         {
-                            name: '',
-                            description: '',
+                            name: 'Product Name',
+                            description: 'Product description',
                             quantity: 1,
                             price: 100,
                             tax: 0,
@@ -72,11 +73,11 @@ In your controller, create the configuration variables. You can use the options 
                 }
             };
 
-            $scope.onReady = function () {
+            $scope.onEnter = function (config) {
                 // After paypal is initialized
             };
 
-            $scope.onComplete = function (result) {
+            $scope.onComplete = function (data, actions, config) {
                 // After completing the payment, this will execute
             };
         });
@@ -86,8 +87,8 @@ Then use the directive:
 ```html
     <paypal-checkout
         config="config"
-        on-ready="onReady()"
-        on-complete="onComplete($result)">
+        on-enter="onEnter"
+        on-complete="onComplete">
     </paypal-checkout>
 ```
 
