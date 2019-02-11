@@ -1,4 +1,5 @@
 # Angular Paypal Checkout Button
+[![Build Status](https://travis-ci.org/dashawk/angular-paypal-checkout.svg?branch=master)](https://travis-ci.org/dashawk/angular-paypal-checkout)
 
 This directive implements the paypal checkout button in `AngularJs 1.x`.
 
