@@ -1,7 +1,7 @@
 {
   "name": "angular-paypal-checkout",
   "description": "Paypal Checkout for Client Integration",
-  "main": "index.js",
+  "main": "src/angular-paypal-checkout.js",
   "authors": [
     "Jason <jmpanugaling@gmail.com>"
   ],
@@ -13,13 +13,18 @@
     "angularjs",
     "directive"
   ],
-  "homepage": "http://hobbyhat.com",
+  "homepage": "https://github.com/dashawk/angular-paypal-checkout",
   "ignore": [
     "**/.*",
     "node_modules",
     "vendor",
     "bower_components",
+    "dist",
     "test",
-    "tests"
+    "tests",
+    ".gitignore",
+    ".travis.yml",
+    "gulpfile.js",
+    "README.md"
   ]
 }
