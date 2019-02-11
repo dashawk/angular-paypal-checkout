@@ -95,4 +95,12 @@ Then use the directive:
 
 ## Demo
 
-Demo coming soon
+Navigate to example folder.
+
+```cli
+    npm install live-server -g  # Save globally
+
+    bower install               # install bower dependencies
+
+    live-server                 # serve the app
+```
