@@ -1,0 +1,23 @@
+{
+  "name": "example",
+  "homepage": "https://github.com/dashawk/angular-paypal-checkout",
+  "authors": [
+    "Jason <jmpanugaling@gmail.com>"
+  ],
+  "description": "Example App that uses the paypal button",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.2.1",
+    "angular": "^1.7.7",
+    "angular-paypal-checkout": "*"
+  }
+}

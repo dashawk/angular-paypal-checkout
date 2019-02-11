@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="TestController as vm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="./bower_components/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      h3 {
+        text-align: center;
+      }
+      .container {
+        padding-top: 40px;
+      }
+      .paypal-checkout-button {
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Paypal button Test</h3>
+          <paypal-checkout config="vm.config"></paypal-checkout>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-paypal-checkout/src/angular-paypal-checkout.js"></script>
+    <script>
+      (function() {
+        "use strict";
+
+        angular
+          .module("app", ["jmp.paypalCheckout"])
+          .controller("TestController", function() {
+            var vm = this;
+
+            vm.config = {
+              /**
+               * This is a boolean type variable. If this variable is missing
+               * in the configuration, it will assume that you are in production mode
+               * */
+              sandbox: true,
+
+              sandboxClientID: "Ad9oxkIUGwfWVYfoTcVN37rUtaMS_gduCCsqCTRokR8lEVNhyz9iJuKX3OHwLEyHQzRaFHkCzxBHXg_P",
+              productionClientID: "",
+
+              checkoutFlow: true, // Optional
+              useConfirmation: false, // Not yet implemented
+
+              locale: "en_GB", // Optional
+              style: {
+                // size: 'medium',     // small | medium | large | responsive
+                // label: 'Checkout',
+                // shape: 'pill',      // pill | rect
+                // color: 'gold'       // gold | blue | silver | black
+                size: "small",
+                color: "gold",
+                shape: "rect",
+                tagline: "false"
+              },
+
+              /**
+               *
+               */
+              transactions: [],
+
+              payments: {
+                currency: "USD",
+                shippingFee: 0, // Optional
+                tax: 0, // Optional
+                referenceID: "TEST-REF001", // Optional
+                totalAmount: 100, // total amount to be paid
+                subTotalAmount: 100,
+
+                /**
+                 * Optional. If ever you want to fill this in,
+                 * make sure that the sub total amount
+                 * should match in the total amount
+                 * */
+                items: [
+                  {
+                    name: "Item 1",
+                    description: "This is the item 1",
+                    quantity: 1,
+                    price: 100,
+                    tax: 0,
+                    sku: "SKU-TEST",
+                    currency: "USD"
+                  }
+                ]
+              }
+            };
+          });
+      })();
+    </script>
+  </body>
+</html>
