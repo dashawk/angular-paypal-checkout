@@ -1,7 +1,7 @@
 # Angular Paypal Checkout Button
 [![Build Status](https://travis-ci.org/dashawk/angular-paypal-checkout.svg?branch=master)](https://travis-ci.org/dashawk/angular-paypal-checkout)
 
-This directive implements the paypal checkout button in `AngularJs 1.x` for easier implementation for javascript clients like `angular`. It uses the the Client Rest integration based on the examples provided by paypal.
+This directive implements the paypal checkout button in `AngularJs 1.x` for easier implementation for javascript clients like `angular`. It uses the the Client Rest integration based on the examples provided by paypal. There is no need to add scripts in the header or in the body because it will automatically inject the Paypal SDk in the body.
 
 ## Installation
 

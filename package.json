@@ -9,13 +9,12 @@
   "scripts": {
     "init": "npm install",
     "install": "bower install",
-    "demo": "node index.js"
+    "demo": "cd ./example && npm install"
   },
   "keywords": [],
   "author": "Jason <jmpanugaling@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "angular": "^1.7.7",
     "bower": "^1.8.8",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
@@ -26,7 +25,9 @@
     "pump": "^3.0.0",
     "serve": "^10.1.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.7.7"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dashawk/angular-paypal-checkout.git"
